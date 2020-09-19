@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game Game Over</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id='txtGameOver'>Game Over</h1>
+    <button id='btnStartNew'>Start New Game</button>
+    <script>
+        const gameOver = document.querySelector("#txtGameOver");
+        setInterval(function(){
+            gameOver.classList.toggle('gameover');
+        }, 750);
+
+        const button = document.querySelector('btnStartNew');
+        document.body.addEventListener('click', function(e){
+            if(e.target.tagName === "BUTTON"){
+                window.location = 'powell-memorygame.html';
+            }
+        })
+    </script>
+</body>
+</html>
